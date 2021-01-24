@@ -30,3 +30,7 @@ rem - 相對單位, 比例只依照 HTML 標籤影響
 
 ### 7. What tools would you use to find a performance bug in your code?
 沒有很熟運用到, 自己平常檢查是利用 Chrome DevTool 檢查 performance
+
+
+## Programming exercise
+https://coolizzluo.github.io/Scenic_Spot/
