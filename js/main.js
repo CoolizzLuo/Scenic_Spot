@@ -88,6 +88,17 @@ app.component('table-component', {
       this.hasData = this.list.length ? true : false;
     },
   },
+  methods: {
+    parseTown(address) {
+      const temp1 = address.substring(3,6);
+      const temp2 = address.substring(6,9);
+      if(typeof(Number(temp1) === 'Number')) {
+        return temp2
+      } else {
+        return temp1
+      }
+    }
+  },
   template: `
     <table class="table table-striped table table-bordered table-hover">
       <thead class="thead-dark">
@@ -103,7 +114,7 @@ app.component('table-component', {
         <tr v-for="({ Id, Region, Town, Name, Add }, index) in list" :key="Id">
           <th>{{ index+1 }}</th>
           <th>{{ Region ? Region : Add.substring(0,3) }}</th>
-          <th>{{ Town ? Town : Add.substring(3,9) }}</th>
+          <th>{{ Town ? Town : parseTown(Add) }}</th>
           <th>{{ Name }}</th>
         </tr>
       </tbody>
