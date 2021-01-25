@@ -43,7 +43,7 @@ const app = Vue.createApp({
     },
     arenaList() {
       const set = new Set();
-      const arenaTemp = this.filtersArena.filter((spot) => {
+      const arenaTemp = this.filterSpotList.filter((spot) => {
         if (spot.Region) {
           return !set.has(spot.Region) ? set.add(spot.Region) : false;
         }
