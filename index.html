@@ -12,22 +12,26 @@
     <div id="app" v-cloak>
       <div class="searchBar">
         <div class="inputGroup">
-          <label>行政區篩選：
+          <label
+            >行政區篩選：
             <select v-model="filterOption.region">
               <option value="all">不限區域</option>
               <option v-for="arena in arenaList" :key="arena">{{ arena }}</option>
             </select>
           </label>
-          <label>地點名稱搜尋：
+          <label
+            >地點名稱搜尋：
             <input type="text" v-model="filterOption.input" />
           </label>
-          <label v-show="pageList.length">選擇頁數：
+          <label v-show="pageList.length"
+            >選擇頁數：
             <select v-model="pageOption.currPage">
               <option v-for="page in maxPage" :key="page">{{ page }}</option>
             </select>
           </label>
+          <span class="lh-47 color-red">共有 {{ filtersArena.length }} 筆資料</span>
         </div>
-        <span class="updateTime">更新時間：{{ formatTime }}</span>
+        <span class="lh-47">更新時間：{{ formatTime }}</span>
       </div>
 
       <div class="info" v-if="loading">Loading...</div>

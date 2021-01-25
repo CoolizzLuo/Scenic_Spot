@@ -7,6 +7,10 @@ body {
 h1 {
   margin-left: 10px;
 }
+.color-red {
+  color: #e61e1e;
+}
+
 .info {
   position: absolute;
   top: 50%;
@@ -33,13 +37,13 @@ h1 {
   background: #f4f4f4;
   border-radius: 10px;
 }
-input[type='text'] {
+.inputGroup input[type='text'] {
   font-size: 14px;
 }
-.updateTime {
-  line-height: 46px;
-  float: right;
+.lh-47 {
+  line-height: 47px;
 }
+
 .table tbody th {
   color: #2c3e50;
 }
