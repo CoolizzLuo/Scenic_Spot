@@ -43,7 +43,7 @@ const app = Vue.createApp({
     },
     arenaList() {
       const set = new Set();
-      const arenaTemp = this.spotList.filter((spot) => {
+      const arenaTemp = this.filtersArena.filter((spot) => {
         if (spot.Region) {
           return !set.has(spot.Region) ? set.add(spot.Region) : false;
         }
@@ -100,7 +100,7 @@ app.component('table-component', {
     }
   },
   template: `
-    <table class="table table-striped table table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover">
       <thead class="thead-dark">
         <tr>
           <th>#</th>

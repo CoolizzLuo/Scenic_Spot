@@ -40,6 +40,9 @@ h1 {
 .inputGroup input[type='text'] {
   font-size: 14px;
 }
+select {
+  cursor: pointer;
+}
 .lh-47 {
   line-height: 47px;
 }

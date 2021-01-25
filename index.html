@@ -21,7 +21,7 @@
           </label>
           <label
             >地點名稱搜尋：
-            <input type="text" v-model="filterOption.input" />
+            <input type="text" v-model.trim="filterOption.input" />
           </label>
           <label v-show="pageList.length"
             >選擇頁數：
