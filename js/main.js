@@ -1,6 +1,6 @@
 // data source
 // const api = 'https://gis.taiwan.net.tw/XMLReleaseALL_public/scenic_spot_C_f.json';
-const api = './spotlist.json';
+const API = './spotlist.json';
 
 const app = Vue.createApp({
   data() {
@@ -62,7 +62,7 @@ const app = Vue.createApp({
   },
   created() {
     this.loading = true;
-    fetch(api)
+    fetch(API)
       .then((res) => res.json())
       .then((data) => {
         this.spotList = data['XML_Head']['Infos']['Info'];
@@ -102,8 +102,8 @@ app.component('table-component', {
         <div class="info" v-show="!hasData">查無資料...</div>
         <tr v-for="({ Id, Region, Town, Name, Add }, index) in list" :key="Id">
           <th>{{ index+1 }}</th>
-          <th>{{ Region ? Region : Add.substring(0,6) }}</th>
-          <th>{{ Town }}</th>
+          <th>{{ Region ? Region : Add.substring(0,3) }}</th>
+          <th>{{ Town ? Town : Add.substring(3,9) }}</th>
           <th>{{ Name }}</th>
         </tr>
       </tbody>
